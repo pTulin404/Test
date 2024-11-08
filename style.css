@@ -10,7 +10,7 @@ body, html {
 
 /* โลโก้ทั้งสองที่มุมซ้ายบน */
 .logo-container {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
     display: flex;
