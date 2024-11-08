@@ -146,8 +146,8 @@ body, html {
     .logo-container {
         flex-direction: column;
         top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 20px;
+        transform: none;
     }
 
     body, html {
