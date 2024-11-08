@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Management in The Cities of The Future</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+
+<body>
+    <!-- โลโก้ที่มุมซ้ายบน -->
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <img src="GISTDA_LOGO.png" alt="GISTDA Logo" class="logo">
+    </div>
+
+    <div class="container">
+        <div id="map"></div>
+        <div class="info-panel">
+            <h1>Carbon Management in The Cities of The Future</h1>
+            <div class="carbon-info-box">
+                <h3>ข้อมูลคาร์บอน</h3>
+                <p>การปลดปล่อยคาร์บอนตลอดปี: <span id="carbonEmission">31827.27018 tCO2e</span></p>
+                <p>พื้นที่สีเขียวดูดซับได้: <span id="carbonAbsorption">930.9828067 tCO2e</span></p>
+            </div>
+            <div class="chart-box">
+                <canvas id="carbonChart" width="300" height="300"></canvas>
+                <div class="toggle-buttons">
+                    <button onclick="loadCurrentData()">ปัจจุบัน</button>
+                    <button onclick="loadFutureData()">อนาคต 30 ปี</button>
+                </div>
+            </div>
+            <!-- คำอธิบายสัญลักษณ์ -->
+            <div id="legend" class="legend">
+                <h3>คำอธิบายสัญลักษณ์</h3>
+                <div><span class="color-box" style="background-color: #00FF00;"></span> ปลดปล่อยคาร์บอนต่ำ</div>
+                <div><span class="color-box" style="background-color: #FFFF00;"></span> ปลดปล่อยปานกลาง </div>
+                <div><span class="color-box" style="background-color: #FF0000;"></span> ปลดปล่อยสูง </div>
+                <div><span class="color-box" style="background-color: #1E90FF;"></span> พื้นที่มีศักยภาพดูดซับคาร์บอนต่ำ</div>
+                <div><span class="color-box" style="background-color: #8A2BE2;"></span> พื้นที่มีศักยภาพดูดซับคาร์บอนปานกลาง </div>
+                <div><span class="color-box" style="background-color: #FF8C00;"></span> พื้นที่มีศักยภาพดูดซับคาร์บอนสูง</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
